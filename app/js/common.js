@@ -1,6 +1,6 @@
 $(".stages-box").click(function () {
     var id = $(this).attr('data-tab'),
-        content = $('.stages-number[data-tab="'+ id +'"]');
+        content = $('.stages-number[data-tab="' + id + '"]');
 
     $('.stages-box.active').removeClass('active'); // 1
     $(this).addClass('active'); // 2
@@ -33,7 +33,6 @@ $('.project-slider__description').slick({
 // slider end
 
 
-
 // модальные окна (несколько)
 $(document).ready(function () {
     var overlay = $('.overlay');
@@ -52,12 +51,13 @@ $(document).ready(function () {
                         opacity: 1,
                         top: '50%'
                     }, 200);
+
                 $('.form-quiz__content').slick({
                     slidesToShow: 1,
                     asNavFor: '.dialog-manager__wrapper',
                     fade: true,
-                    nextArrow: '<button type="button" class="slick-next">Далее<img src="img/arrow.svg" alt="" class="icon"></button>',
-                    prevArrow: '<button type="button" class="slick-prev"><img src="img/arrow2.svg" alt=""></button>',
+                    nextArrow: '<button type="button" class="slick-next btn-next">Далее<img src="img/arrow.svg" alt="" class="icon"></button>',
+                    prevArrow: '<button type="button" class="slick-prev btn-prev"><img src="img/arrow2.svg" alt=""></button>',
                     appendArrows: '.button-group',
                     infinite: false,
                     // adaptiveHeight: true
@@ -70,6 +70,28 @@ $(document).ready(function () {
                     fade: true,
                     infinite: false,
                 });
+
+                function setProgress(index) {
+                    const calc = ((index ) / ($slider.slick('getSlick').slideCount)) * 100;
+
+                    $progressBar
+                        .css('width', calc + '%')
+                        .attr('aria-valuenow', calc);
+
+                    $progressBarLabel.text(`${calc.toFixed()}%`);
+                }
+
+                const $slider = $('.form-quiz__content');
+                const $progressBar = $('.progress-bg');
+                const $progressBarLabel = $('.percent-val__footer');
+
+                $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                    setProgress(nextSlide);
+                });
+
+
+
+                setProgress(0);
 
             });
 
@@ -92,11 +114,14 @@ $(document).ready(function () {
 //end
 
 
-$(".form-quiz__content").on("afterChange", function(event) {
-    if($(this).find('.slick-slide').last().hasClass('slick-active')) {
+$(".form-quiz__content").on("afterChange", function (event) {
+    if ($(this).find('.slick-slide').last().hasClass('slick-active')) {
         $('.form-quiz').addClass('form-quiz-result');
     }
 });
+
+
+
 
 // mail
 $("form").submit(function () {
@@ -124,8 +149,6 @@ $(document).ready(function () {
         return false;
     });
 });
-
-
 
 
 // смена контента в модальном окне квиз
