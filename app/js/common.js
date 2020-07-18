@@ -72,7 +72,7 @@ $(document).ready(function () {
                 });
 
                 function setProgress(index) {
-                    const calc = ((index ) / ($slider.slick('getSlick').slideCount)) * 100;
+                    const calc = ((index) / ($slider.slick('getSlick').slideCount)) * 100;
 
                     $progressBar
                         .css('width', calc + '%')
@@ -88,7 +88,6 @@ $(document).ready(function () {
                 $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
                     setProgress(nextSlide);
                 });
-
 
 
                 setProgress(0);
@@ -121,8 +120,6 @@ $(".form-quiz__content").on("afterChange", function (event) {
 });
 
 
-
-
 // mail
 $("form").submit(function () {
     $.ajax({
@@ -145,27 +142,28 @@ $(document).ready(function () {
             $('html, body').animate({
                 scrollTop: $(scroll_el).offset().top
             }, 500);
+            $('.mobile-menu').fadeOut();
         }
         return false;
     });
 });
 
-
-// смена контента в модальном окне квиз
-// $(document).ready(() => {
-//     $('.btn-next').click(function () {
-//         if (!$('.quiz-stages').last().hasClass('current')) $('.current').removeClass('current').next().addClass('current');
-//         if (!$('.quote').last().hasClass('current')) $('.current').removeClass('current').next().addClass('current');
-//         if ($('.quiz-stages__two').hasClass('current')) $('.btn-prev').css('display', 'flex');
-//     });
-//
-//     $('.btn-prev').click(function () {
-//         if (!$('.quiz-stages').first().hasClass('current')) $('.current').removeClass('current').prev().addClass('current');
-//         if (!$('.quiz-stages').first().hasClass('current')) $('.current').removeClass('current').prev().addClass('current');
-//         if ($('.quiz-stages__one').hasClass('current')) $('.btn-prev').css('display', 'none');
-//     });
-// });
+$('.btn-burger').click(function () {
+    $('.mobile-menu').fadeToggle();
+});
 
 
+$(document).mouseup(function (e) { // событие клика по веб-документу
+    var div = $(".mobile-menu"); // тут указываем ID элемента
+    var btn = $('.btn-burger');
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        && !btn.is(e.target) && btn.has(e.target).length === 0
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        div.fadeOut(); // скрываем его
+    }
+});
 
-
+$('.question-box > h3').click(function () {
+    $('.question-box').removeClass('active');
+    $(this).parents('.question-box').addClass('active')
+});

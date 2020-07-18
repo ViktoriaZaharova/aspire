@@ -34,6 +34,33 @@
 
 <body>
 
+<div class="mobile-menu">
+    <div class="mobile-menu__wrapper">
+        <a href="tel:+79616577790" class="phone">+7 (961) 657-77-90</a>
+
+        <ul class="menu">
+            <li><a href="#stages_work" class="go_to">Как мы работаем</a></li>
+            <li><a href="#project" class="go_to">Наши проекты</a></li>
+            <li><a href="#command" class="go_to">Команда</a></li>
+            <li><a href="#question" class="go_to">Частые вопросы</a></li>
+            <li><a href="#contacts" class="go_to">Контакты</a></li>
+        </ul>
+
+        <a href="#callback__modal" class="btn btn-border open_modal">Заказать звонок</a>
+
+        <ul class="list-social">
+            <li><a href="#"><img src="img/vk.svg" alt=""></a></li>
+            <li><a href="#"><img src="img/inst.svg" alt=""></a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="btn-burger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
 <header>
     <div class="container">
         <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
@@ -56,6 +83,7 @@
 
             <a href="#callback__modal" class="btn btn-border open_modal">Заказать звонок</a>
         </div>
+
     </div>
 </header>
 
@@ -76,12 +104,16 @@
             <a href="#callback__modal" class="btn btn-border open_modal">Оставить заявку</a>
         </div>
 
-        <div class="main-img"><img src="img/img1.png" alt=""></div>
+        <div class="main-img">
+            <div class="main-description color-accent d-none">Мы знаем, как продать любой бизнес</div>
+            <img src="img/img1.png" alt=""></div>
     </div>
 </main>
 
 <section class="about bg-gradient">
     <div class="container">
+        <h2 class="d-none">О нас</h2>
+
         <div class="about-content">
             <h2>О нас</h2>
 
@@ -108,10 +140,10 @@
             <div class="clarification">Услуга полностью бесплатная</div>
         </div>
 
-        <div class="play-btn"><img src="img/play.png" alt=""></div>
 
         <div class="about-image">
-            <img src="img/img2.jpeg" alt="">
+            <div class="play-btn"><img src="img/play.png" alt=""></div>
+            <img src="img/img2.jpg" alt="">
         </div>
     </div>
 </section>
@@ -280,6 +312,44 @@
                 </div>
             </div>
 
+            <div class="block-hidden__mobile">
+                <div class="line-number stages-number" data-tab="stages-number__one">
+                    <div class="block-hidden">
+                        <strong class="color-blue">Ежемесячная прибыль в разрезе года</strong>
+                        <p>
+                            Бизнес - это система приносящая прибыль. Чем выше прибыль, тем дороже бизнес</p>
+                    </div>
+                </div>
+
+                <div class="line-number stages-number" data-tab="stages-number__two">
+
+                    <div class="block-hidden">
+                        <strong class="color-blue">Возраст бизнеса</strong>
+                        <p>Чем <span class="color-blue">выше</span> возраст бизнеса, тем <span
+                                class="color-blue">дороже</span> он оценивается на рынке
+                            покупателями</p>
+                    </div>
+                </div>
+
+                <div class="line-number stages-number" data-tab="stages-number__three">
+                    <div class="block-hidden">
+                        <strong class="color-blue">Материальные и не материальные активы</strong>
+                        <p><span class="color-blue">Материальные</span> - оборудование, мебель, товарный остаток</p>
+                        <p><span class="color-blue">Нематериальные</span> - сайт, источники маркетинга, скрипты и т.д.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="line-number stages-number active" data-tab="stages-number__four">
+                    <div class="block-hidden">
+                        <p><strong class="color-blue">Сегмент рынка</strong> - важен для просчета стоимости бизнеса, т.к
+                            есть <span class="color-blue">специфичные</span>
+                            сегменты,
+                            например: <span class="color-blue">«Интернет-магазины»</span></p>
+                    </div>
+                </div>
+            </div>
+
             <div class="stages-assessment__text">
                 <div class="stages-box" data-tab="stages-number__one">
                     <div class="number">I</div>
@@ -411,8 +481,8 @@
                                     </p></li>
                                     <li><p>— Имущество бизнеса: <span><span class="color-accent">4</span> ноутбука, мебель и.т.д.</span>
                                     </p></li>
-                                    <li><p>— Имущество бизнеса: <span><span class="color-accent">4</span> ноутбука, мебель и.т.д.</span>
-                                    </p></li>
+                                    <li><p>— Сегмент рынка: <span>образовательные <span
+                                            class="color-accent">франшизы</span></span></p></li>
                                 </ul>
                             </li>
 
@@ -466,8 +536,8 @@
                                     </p></li>
                                     <li><p>— Имущество бизнеса: <span><span class="color-accent">4</span> ноутбука, мебель и.т.д.</span>
                                     </p></li>
-                                    <li><p>— Имущество бизнеса: <span><span class="color-accent">4</span> ноутбука, мебель и.т.д.</span>
-                                    </p></li>
+                                    <li><p>— Сегмент рынка: <span>образовательные <span
+                                            class="color-accent">франшизы</span></span></p></li>
                                 </ul>
                             </li>
 
@@ -521,10 +591,62 @@
                                     </p></li>
                                     <li><p>— Имущество бизнеса: <span><span class="color-accent">4</span> ноутбука, мебель и.т.д.</span>
                                     </p></li>
-                                    <li><p>— Имущество бизнеса: <span><span class="color-accent">4</span> ноутбука, мебель и.т.д.</span>
-                                    </p></li>
+                                    <li><p>— Сегмент рынка: <span>образовательные <span
+                                            class="color-accent">франшизы</span></span></p></li>
                                 </ul>
                             </li>
+
+                            <li>
+                                <p>Подготовка документов к продаже:
+                                    <span> <span class="color-accent">2</span> недели</span></p>
+                            </li>
+                            <li>
+                                <p>Переоформление бизнеса:
+                                    <span><span class="color-accent">1</span> неделя</span></p>
+                            </li>
+                            <li>
+                                <p>Сумма продажи:
+                                    <span><span class="color-accent">3 000 000</span> рублей</span></p>
+                            </li>
+                            <li>
+                                <p>Результат:
+                                    <span>продано за <span class="color-accent">3 месяца</span> с учетом <span
+                                            class="color-accent">подготовки</span>
+                                    документов и <span class="color-accent">переоформления</span> бизнеса</span></p>
+                            </li>
+                        </ul>
+
+                        <a href="#assessment__modal" class="btn btn-border open_modal">У меня подобный бизнес</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="project-box">
+                        <h3 class="color-accent">«LIKE-центр»</h3>
+
+                        <ul class="list-characteristics">
+                            <li>
+                                <p>Геолокация:
+                                    <span class="color-accent">Волгоград</span></p>
+                            </li>
+                            <li>
+                                <p>Цель:
+                                    <span><span class="color-accent">продать</span>  действующий бизнес франчайзи</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>Срок:
+                                    <span>до <span class="color-accent">6</span> месяцев</span></p>
+                            </li>
+                            <ul>
+                                <li><p>— Оборот: <span><span class="color-accent">350 тыс.</span> в месяц</span></p>
+                                </li>
+                                <li><p>— Возраст бизнеса: <span><span class="color-accent">1,5</span> года</span>
+                                </p></li>
+                                <li><p>— Имущество бизнеса: <span><span class="color-accent">4</span> ноутбука, мебель и.т.д.</span>
+                                </p></li>
+                                <li><p>— Сегмент рынка: <span>образовательные <span class="color-accent">франшизы</span></span>
+                                </p></li>
+                            </ul>
 
                             <li>
                                 <p>Подготовка документов к продаже:
@@ -576,63 +698,8 @@
                                     </p></li>
                                     <li><p>— Имущество бизнеса: <span><span class="color-accent">4</span> ноутбука, мебель и.т.д.</span>
                                     </p></li>
-                                    <li><p>— Имущество бизнеса: <span><span class="color-accent">4</span> ноутбука, мебель и.т.д.</span>
-                                    </p></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <p>Подготовка документов к продаже:
-                                    <span> <span class="color-accent">2</span> недели</span></p>
-                            </li>
-                            <li>
-                                <p>Переоформление бизнеса:
-                                    <span><span class="color-accent">1</span> неделя</span></p>
-                            </li>
-                            <li>
-                                <p>Сумма продажи:
-                                    <span><span class="color-accent">3 000 000</span> рублей</span></p>
-                            </li>
-                            <li>
-                                <p>Результат:
-                                    <span>продано за <span class="color-accent">3 месяца</span> с учетом <span
-                                            class="color-accent">подготовки</span>
-                                    документов и <span class="color-accent">переоформления</span> бизнеса</span></p>
-                            </li>
-                        </ul>
-
-                        <a href="#assessment__modal" class="btn btn-border open_modal">У меня подобный бизнес</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="project-box">
-                        <h3 class="color-accent">«LIKE-центр»</h3>
-
-                        <ul class="list-characteristics">
-                            <li>
-                                <p>Геолокация:
-                                    <span class="color-accent">Волгоград</span></p>
-                            </li>
-                            <li>
-                                <p>Цель:
-                                    <span><span class="color-accent">продать</span>  действующий бизнес франчайзи</span>
-                                </p>
-                            </li>
-                            <li>
-                                <p>Срок:
-                                    <span>до <span class="color-accent">6</span> месяцев</span></p>
-                            </li>
-                            <li>
-                                <p>Основные показатели бизнеса:</p>
-                                <ul>
-                                    <li><p>— Оборот: <span><span class="color-accent">350 тыс.</span> в месяц</span></p>
-                                    </li>
-                                    <li><p>— Возраст бизнеса: <span><span class="color-accent">1,5</span> года</span>
-                                    </p></li>
-                                    <li><p>— Имущество бизнеса: <span><span class="color-accent">4</span> ноутбука, мебель и.т.д.</span>
-                                    </p></li>
-                                    <li><p>— Имущество бизнеса: <span><span class="color-accent">4</span> ноутбука, мебель и.т.д.</span>
-                                    </p></li>
+                                    <li><p>— Сегмент рынка: <span>образовательные <span
+                                            class="color-accent">франшизы</span></span></p></li>
                                 </ul>
                             </li>
 
@@ -666,6 +733,10 @@
 
 <section class="command bg-gradient color-white" id="command">
     <div class="container">
+        <h2 class="d-none">ДАВАЙТЕ ПОЗНАКОМИМСЯ, <br>
+            Меня зовут <span class="color-accent">Орыщенко Никита</span>
+            — <br>основатель компании Aspire</h2>
+
         <div class="command-photo"><img src="img/men.png" alt=""></div>
 
         <div class="command-content">
@@ -674,11 +745,12 @@
                 я — основатель компании Aspire</h2>
 
             <div class="text">
-                <p><span class="color-accent">Aspire</span> задумывалось как агенство обратившись в которое вы 100%
+                <p class="text1"><span class="color-accent">Aspire</span> задумывалось как агенство обратившись в
+                    которое вы 100%
                     получите результат, <span class="color-accent">без исключений</span>.</p>
-                <p>Мы <span class="color-accent">не гонимся</span> за количеством сделок - для нас <span
+                <p class="text2">Мы <span class="color-accent">не гонимся</span> за количеством сделок - для нас <span
                         class="color-accent">важна</span> каждая сделка.</p>
-                <p>Мы берем <span class="color-accent">профессионализмом</span>, а не количеством.</p>
+                <p class="text3">Мы берем <span class="color-accent">профессионализмом</span>, а не количеством.</p>
             </div>
         </div>
     </div>
@@ -698,63 +770,69 @@
         <h2>Часто задаваемые вопросы</h2>
 
         <div class="question-content">
-            <div class="question-box">
+            <div class="question-box active">
                 <h3>Вопрос 1</h3>
                 <div class="text">
-                    <p>Товарищи! новая модель организационной деятельности требуют от нас анализа дальнейших направлений
-                        развития. Не следует, однако забывать, что сложившаяся структура организации позволяет выполнять
-                        важные задания по разработке модели развития. С другой стороны постоянное
-                        информационно-пропагандистское обеспечение нашей деятельности влечет за собой успех.</p>
+                    <p>Товарищи! <span class="color-blue">новая</span> модель организационной деятельности требуют от
+                        нас <span class="color-blue">анализа</span> дальнейших направлений
+                        развития. Не следует, однако забывать, что сложившаяся <span class="color-blue">структура</span> организации позволяет выполнять
+                        важные задания по разработке модели <span class="color-blue">развития</span>. С другой стороны <span class="color-blue">постоянное</span>
+                        информационно-пропагандистское обеспечение нашей деятельности влечет за собой <span class="color-blue">успех</span>.</p>
                 </div>
             </div>
 
             <div class="question-box">
                 <h3>Вопрос 2</h3>
                 <div class="text">
-                    <p>Товарищи! новая модель организационной деятельности требуют от нас анализа дальнейших направлений
-                        развития. Не следует, однако забывать, что сложившаяся структура организации позволяет выполнять
-                        важные задания по разработке модели развития. С другой стороны постоянное
-                        информационно-пропагандистское обеспечение нашей деятельности влечет за собой успех.</p>
+                    <p>Товарищи! <span class="color-blue">новая</span> модель организационной деятельности требуют от
+                        нас <span class="color-blue">анализа</span> дальнейших направлений
+                        развития. Не следует, однако забывать, что сложившаяся <span class="color-blue">структура</span> организации позволяет выполнять
+                        важные задания по разработке модели <span class="color-blue">развития</span>. С другой стороны <span class="color-blue">постоянное</span>
+                        информационно-пропагандистское обеспечение нашей деятельности влечет за собой <span class="color-blue">успех</span>.</p>
                 </div>
             </div>
 
             <div class="question-box">
                 <h3>Вопрос 3</h3>
                 <div class="text">
-                    <p>Товарищи! новая модель организационной деятельности требуют от нас анализа дальнейших направлений
-                        развития. Не следует, однако забывать, что сложившаяся структура организации позволяет выполнять
-                        важные задания по разработке модели развития. С другой стороны постоянное
-                        информационно-пропагандистское обеспечение нашей деятельности влечет за собой успех.</p>
+                    <p>Товарищи! <span class="color-blue">новая</span> модель организационной деятельности требуют от
+                        нас <span class="color-blue">анализа</span> дальнейших направлений
+                        развития. Не следует, однако забывать, что сложившаяся <span class="color-blue">структура</span> организации позволяет выполнять
+                        важные задания по разработке модели <span class="color-blue">развития</span>. С другой стороны <span class="color-blue">постоянное</span>
+                        информационно-пропагандистское обеспечение нашей деятельности влечет за собой <span class="color-blue">успех</span>.</p>
                 </div>
             </div>
 
             <div class="question-box">
                 <h3>Вопрос 4</h3>
                 <div class="text">
-                    <p>Товарищи! новая модель организационной деятельности требуют от нас анализа дальнейших направлений
-                        развития. Не следует, однако забывать, что сложившаяся структура организации позволяет выполнять
-                        важные задания по разработке модели развития. С другой стороны постоянное
-                        информационно-пропагандистское обеспечение нашей деятельности влечет за собой успех.</p>
+                    <p>Товарищи! <span class="color-blue">новая</span> модель организационной деятельности требуют от
+                        нас <span class="color-blue">анализа</span> дальнейших направлений
+                        развития. Не следует, однако забывать, что сложившаяся <span class="color-blue">структура</span> организации позволяет выполнять
+                        важные задания по разработке модели <span class="color-blue">развития</span>. С другой стороны <span class="color-blue">постоянное</span>
+                        информационно-пропагандистское обеспечение нашей деятельности влечет за собой <span class="color-blue">успех</span>.</p>
                 </div>
             </div>
 
             <div class="question-box">
                 <h3>Вопрос 5</h3>
                 <div class="text">
-                    <p>Товарищи! новая модель организационной деятельности требуют от нас анализа дальнейших направлений
-                        развития. Не следует, однако забывать, что сложившаяся структура организации позволяет выполнять
-                        важные задания по разработке модели развития. С другой стороны постоянное
-                        информационно-пропагандистское обеспечение нашей деятельности влечет за собой успех.</p>
+                    <p>Товарищи! <span class="color-blue">новая</span> модель организационной деятельности требуют от
+                        нас <span class="color-blue">анализа</span> дальнейших направлений
+                        развития. Не следует, однако забывать, что сложившаяся <span class="color-blue">структура</span> организации позволяет выполнять
+                        важные задания по разработке модели <span class="color-blue">развития</span>. С другой стороны <span class="color-blue">постоянное</span>
+                        информационно-пропагандистское обеспечение нашей деятельности влечет за собой <span class="color-blue">успех</span>.</p>
                 </div>
             </div>
 
             <div class="question-box">
                 <h3>Вопрос 6</h3>
                 <div class="text">
-                    <p>Товарищи! новая модель организационной деятельности требуют от нас анализа дальнейших направлений
-                        развития. Не следует, однако забывать, что сложившаяся структура организации позволяет выполнять
-                        важные задания по разработке модели развития. С другой стороны постоянное
-                        информационно-пропагандистское обеспечение нашей деятельности влечет за собой успех.</p>
+                    <p>Товарищи! <span class="color-blue">новая</span> модель организационной деятельности требуют от
+                        нас <span class="color-blue">анализа</span> дальнейших направлений
+                        развития. Не следует, однако забывать, что сложившаяся <span class="color-blue">структура</span> организации позволяет выполнять
+                        важные задания по разработке модели <span class="color-blue">развития</span>. С другой стороны <span class="color-blue">постоянное</span>
+                        информационно-пропагандистское обеспечение нашей деятельности влечет за собой <span class="color-blue">успех</span>.</p>
                 </div>
             </div>
         </div>
@@ -817,6 +895,14 @@
             </ul>
 
             <a href="#callback__modal" class="btn btn-border open_modal">Заказать звонок</a>
+
+
+        </div>
+
+        <div class="btn-burger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
 </footer>
@@ -948,7 +1034,9 @@
 
                     <div class="slide">
                         <div class="quiz-stages quiz-stages__three">
-                            <div class="title-quiz">Какая Ваша, как владельца, средняя чистая доходность в месяц от бизнеса?</div>
+                            <div class="title-quiz">Какая Ваша, как владельца, средняя чистая доходность в месяц от
+                                бизнеса?
+                            </div>
 
                             <div class="quiz-stages__content scroll-block">
                                 <ul class="list-checkbox">
@@ -1221,58 +1309,58 @@
                         </div>
                     </div>
 
-                   <div class="slide">
-                       <div class="quiz-stages quiz-stages__seven">
-                           <div class="title-quiz">Если у вас есть материальные активы, то на какую сумму?</div>
+                    <div class="slide">
+                        <div class="quiz-stages quiz-stages__seven">
+                            <div class="title-quiz">Если у вас есть материальные активы, то на какую сумму?</div>
 
-                           <div class="quiz-stages__content scroll-block">
-                               <ul class="list-checkbox">
-                                   <li>
-                                       <label class="checkbox">
-                                           <span class="label">До 100 тыс. рублей</span>
-                                           <input class="checkbox-inp" type="radio" name="radio_active_sum"
-                                                  value="До 100 тыс. рублей">
-                                           <span class="checkbox-custom"></span>
-                                       </label>
-                                   </li>
+                            <div class="quiz-stages__content scroll-block">
+                                <ul class="list-checkbox">
+                                    <li>
+                                        <label class="checkbox">
+                                            <span class="label">До 100 тыс. рублей</span>
+                                            <input class="checkbox-inp" type="radio" name="radio_active_sum"
+                                                   value="До 100 тыс. рублей">
+                                            <span class="checkbox-custom"></span>
+                                        </label>
+                                    </li>
 
-                                   <li><label class="checkbox">
-                                       <span class="label">100 - 300 тыс. рублей</span>
-                                       <input class="checkbox-inp" type="radio" name="radio_active_sum"
-                                              value="100 - 300 тыс. рублей">
-                                       <span class="checkbox-custom"></span>
-                                   </label></li>
+                                    <li><label class="checkbox">
+                                        <span class="label">100 - 300 тыс. рублей</span>
+                                        <input class="checkbox-inp" type="radio" name="radio_active_sum"
+                                               value="100 - 300 тыс. рублей">
+                                        <span class="checkbox-custom"></span>
+                                    </label></li>
 
-                                   <li>
-                                       <label class="checkbox">
-                                           <span class="label">300 - 500 тыс. рублей</span>
-                                           <input class="checkbox-inp" type="radio" name="radio_active_sum"
-                                                  value="300 - 500 тыс. рублей">
-                                           <span class="checkbox-custom"></span>
-                                       </label>
-                                   </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <span class="label">300 - 500 тыс. рублей</span>
+                                            <input class="checkbox-inp" type="radio" name="radio_active_sum"
+                                                   value="300 - 500 тыс. рублей">
+                                            <span class="checkbox-custom"></span>
+                                        </label>
+                                    </li>
 
-                                   <li>
-                                       <label class="checkbox">
-                                           <span class="label">500 тыс. - 1 млн. рублей</span>
-                                           <input class="checkbox-inp" type="radio" name="radio_active_sum"
-                                                  value="500 тыс. - 1 млн. рублей">
-                                           <span class="checkbox-custom"></span>
-                                       </label>
-                                   </li>
-                                   <li>
-                                       <label class="checkbox">
-                                           <span class="label">Более 1 млн. рублей</span>
-                                           <input class="checkbox-inp" type="radio" name="radio_active_sum"
-                                                  value="Более 1 млн. рублей">
-                                           <span class="checkbox-custom"></span>
-                                       </label>
-                                   </li>
-                               </ul>
-                           </div>
+                                    <li>
+                                        <label class="checkbox">
+                                            <span class="label">500 тыс. - 1 млн. рублей</span>
+                                            <input class="checkbox-inp" type="radio" name="radio_active_sum"
+                                                   value="500 тыс. - 1 млн. рублей">
+                                            <span class="checkbox-custom"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <span class="label">Более 1 млн. рублей</span>
+                                            <input class="checkbox-inp" type="radio" name="radio_active_sum"
+                                                   value="Более 1 млн. рублей">
+                                            <span class="checkbox-custom"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
 
-                       </div>
-                   </div>
+                        </div>
+                    </div>
 
                     <div class="slide">
                         <div class="quiz-stages quiz-stages__eight">
@@ -1333,11 +1421,13 @@
 
                             <div class="result-title">
                                 Оставьте свой номер телефона и
-                                мы вышлем в <span class="color-blue">Telegram/WhatsApp</span> расчет стоимости вашего бизнеса
+                                мы вышлем в <span class="color-blue">Telegram/WhatsApp</span> расчет стоимости вашего
+                                бизнеса
                             </div>
 
                             <div class="description">
-                                Вам никто <span class="color-blue">не будет</span> названивать, вы просто получите информацию в мессенджере
+                                Вам никто <span class="color-blue">не будет</span> названивать, вы просто получите
+                                информацию в мессенджере
                             </div>
 
                             <div class="bonus-wrapper">
@@ -1385,10 +1475,12 @@
 
                         <div class="quote">
                             <p>Здравствуйте, я <span class="color-blue">Никита Орыщенко</span>, эксперт в сфере <span
-                                    class="color-blue">упаковки</span> и <span class="color-blue">продажи</span> бизнеса.
+                                    class="color-blue">упаковки</span> и <span class="color-blue">продажи</span>
+                                бизнеса.
                                 Мне
                                 нужна вводная
-                                информация о Вас, чтобы я мог дать Вам наиболее <span class="color-blue">качественную</span>
+                                информация о Вас, чтобы я мог дать Вам наиболее <span
+                                        class="color-blue">качественную</span>
                                 консультацию!</p>
                         </div>
 
@@ -1414,7 +1506,8 @@
                         </div>
 
                         <div class="quote">
-                            <p>На самом деле продать можно <span class="color-blue">абсолютно</span> любой бизнес. Так что
+                            <p>На самом деле продать можно <span class="color-blue">абсолютно</span> любой бизнес. Так
+                                что
                                 смело
                                 отвечайть.</p>
                         </div>
@@ -1440,7 +1533,8 @@
                             </div>
                         </div>
                         <div class="quote">
-                            <p>Это очень <span class="color-blue">важный</span> вопрос. По возможности укажите свой вариант
+                            <p>Это очень <span class="color-blue">важный</span> вопрос. По возможности укажите свой
+                                вариант
                                 для
                                 более <span class="color-blue">точных</span> подсчётов.</p>
                         </div>
@@ -1467,7 +1561,8 @@
                         </div>
 
                         <div class="quote">
-                            <p>Чем <span class="color-blue">дольше</span> компания на рынке - тем <span class="color-blue">дороже</span>
+                            <p>Чем <span class="color-blue">дольше</span> компания на рынке - тем <span
+                                    class="color-blue">дороже</span>
                                 она стоит. Жду Вашего ответа!</p>
                         </div>
 
@@ -1574,7 +1669,8 @@
                         </div>
 
                         <div class="quote">
-                            <p>Укажите <span class="color-blue">примерную</span> сумму по вашим внутренним ощущениям.</p>
+                            <p>Укажите <span class="color-blue">примерную</span> сумму по вашим внутренним ощущениям.
+                            </p>
                         </div>
 
                         <a href="#" class="banner-min">
@@ -1596,7 +1692,9 @@
                             <span class="text">Получите расчет стоимости</span>
                         </button>
 
-                        <div class="consent">При нажатии на кнопку, вы принимаете условия обработки персональных данных.</div>
+                        <div class="consent">При нажатии на кнопку, вы принимаете условия обработки персональных
+                            данных.
+                        </div>
                     </div>
                 </div>
             </div>
