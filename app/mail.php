@@ -1,6 +1,6 @@
 <?php
 
-$recepient = "zaharova181114@gmail.com";
+$recepient = "info@gmail.com"; // введите свой email
 $sitename = "Aspire";
 
 $name = trim($_POST["name"]);
