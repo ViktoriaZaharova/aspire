@@ -945,8 +945,12 @@ footer
   opacity: 0
   .modal__close
     position: absolute
-    right: 10px
-    top: 10px
+    top: 0
+    right: 0
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    cursor: pointer
   .modal__wrapper
     width: 100%
     height: auto
@@ -1104,6 +1108,7 @@ form
     width: 44px
     margin: 0 0 0 15px
     overflow: hidden
+    display: inline-block
     img
       margin: 0 auto -10px
   .icon
@@ -1158,6 +1163,7 @@ form
   display: flex
   align-items: center
   justify-content: space-between
+  margin: 0 0 0 14px
 
 .btn-blue__light
   height: 40px
@@ -1308,6 +1314,8 @@ form
 .quiz-stages
   padding: 30px 31px 0 33px
   height: 593px
+  width: 100%
+  box-sizing: border-box
 
 
 .quiz-stages__content
@@ -1338,7 +1346,7 @@ form
       border-width: 2px
 
 .scroll-block
-  padding: 0 46px 0 0
+  padding: 0 46px 20px 0
   overflow-y: scroll
   height: 520px
   &::-webkit-scrollbar
@@ -1366,11 +1374,14 @@ form
   height: 593px
   width: 100%
   background: #fff
+
   .slide
     height: 100%
 
 
 .form-quiz
+  border-radius: 12px
+  overflow: hidden
   .slick-next
     width: 120px
     height: 40px
@@ -1608,6 +1619,113 @@ form
     left: 0
     right: 0
     max-width: none
+
+.btn-toggle
+  border-radius: 50%
+  display: none
+  align-items: center
+  justify-content: center
+  width: 20px
+  height: 20px
+  background: #3B73C6
+  position: absolute
+  right: 0
+  top: 14px
+  z-index: 2
+  cursor: pointer
+  img
+    width: 8px
+    transition: .3s ease
+
+.btn-toggle.click
+  img
+    transform: rotate(180deg)
+
+.manager-info__wrapper
+  width: 100%
+
+.quote-min
+  width: 100%
+  margin: 6px 0 0
+  color: #69748C
+  font-size: 11px
+  font-style: italic
+  font-weight: 300
+  display: none
+
+.slide-box
+  height: 100%
+  .quiz-stages__result
+    display: none
+
+.btn-presents
+  position: fixed
+  right: 0
+  top: 40%
+  transform: translate(0,-50%)
+  width: 45px
+  height: 30px
+  display: none
+  align-items: center
+  justify-content: center
+  border-radius: 4px 0 0 4px
+  background: #3B73C6
+  z-index: 2
+
+.bonus-mobile
+  position: fixed
+  right: 0
+  top: 40%
+  transform: translate(0,-50%)
+  z-index: 3
+  background: #171717
+  width: 180px
+  display: none
+  border-radius: 4px 4px 0 0
+  .banner-min
+    display: flex
+    font-size: 10px
+    .img
+      width: 30px
+      margin: 0 0 0 10px
+    .text
+      margin: 5px 0 4px
+      max-width: 105px
+    .icon
+      width: 13px
+      height: 13px
+      top: -6px
+      right: -6px
+
+.bonus-mobile__title
+  width: 100%
+  border-radius: 4px 0px 0px 0px
+  background: #3B73C6
+  height: 30px
+  color: #fff
+  display: flex
+  align-items: center
+  padding: 0 8px
+  font-size: 10px
+  font-weight: 500
+
+.btn-close-bonus
+  width: 20px
+  height: 20px
+  cursor: pointer
+  z-index: 2
+  left: -10px
+  top: -10px
+  position: absolute
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  background: rgba(0, 0, 0, 0.5)
+
+.bonus-mobile__body
+  width: 100%
+  padding: 21px 12px 14px 10px
 
 
 @import "media"

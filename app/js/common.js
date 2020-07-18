@@ -61,6 +61,14 @@ $(document).ready(function () {
                     appendArrows: '.button-group',
                     infinite: false,
                     // adaptiveHeight: true
+                    responsive: [
+                        {
+                            breakpoint: 830,
+                            settings: {
+                                adaptiveHeight: true
+                            }
+                        }
+                    ]
                 });
 
                 $('.dialog-manager__wrapper').slick({
@@ -116,6 +124,7 @@ $(document).ready(function () {
 $(".form-quiz__content").on("afterChange", function (event) {
     if ($(this).find('.slick-slide').last().hasClass('slick-active')) {
         $('.form-quiz').addClass('form-quiz-result');
+        $('.btn-presents').hide();
     }
 });
 
@@ -166,4 +175,16 @@ $(document).mouseup(function (e) { // событие клика по веб-до
 $('.question-box > h3').click(function () {
     $('.question-box').removeClass('active');
     $(this).parents('.question-box').addClass('active')
+});
+
+$('.btn-toggle').click(function () {
+   $(this).toggleClass('click').parents('.manager-info__wrapper').find('.quote-min__visibility').fadeToggle().siblings('.quote-min__hidden').fadeToggle();
+});
+
+$('.btn-close-bonus').click(function () {
+   $('.bonus-mobile').fadeOut();
+});
+
+$('.btn-presents').click(function () {
+    $('.bonus-mobile').fadeIn();
 });

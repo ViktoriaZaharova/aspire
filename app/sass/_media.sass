@@ -188,8 +188,7 @@
   .contacts .btn
     margin: 10px 0 0
 
-  .timeline-wrapper
-    max-width: 250px
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1080px)
@@ -350,6 +349,23 @@
   .contacts-info
     width: calc(100% - 450px)
 
+  .timeline-wrapper
+    max-width: 350px
+
+  .check-description
+    margin: 0 0 14px
+
+  #assessment__modal
+    max-width: 97%
+    .modal__close
+      background: url("../img/close.svg") no-repeat center rgba(0, 0, 0, 0.5)
+        size: contain
+      position: absolute
+      z-index: 2
+    .modal__wrapper
+      padding: 15px 0 0
+
+
 @media only screen and (max-width : 920px)
   .project
     padding: 40px 0
@@ -365,6 +381,10 @@
 
   .project-slider__photo
     margin: 0
+
+  .quiz-stages__result
+    padding: 40px 48px
+
 
 @media only screen and (max-width : 870px)
   .main-img
@@ -525,6 +545,29 @@
     margin: 17px 0 16px
     display: block
 
+  .quiz-stages__business-area
+    justify-content: space-around
+
+  .quiz-stages__business-area .checkbox
+    margin: 0 auto 25px
+
+  .scroll-block
+    overflow-y: visible
+    height: auto
+    padding: 0
+
+  .quiz-stages
+    height: auto
+
+  .form-quiz__content
+    height: auto
+
+  .quiz-stages__business-area .checkbox
+    width: 150px
+
+  .result-title
+    font-size: 20px
+
 
 @media only screen and (max-width : 768px)
   main
@@ -584,8 +627,179 @@
   .command-photo
     width: 250px
 
+  .checkbox
+    width: 100%
 
-/* Extra Small Devices, Phones */
+  .list-checkbox
+    li
+      width: 49%
+
+  .quiz-stages__business-area .checkbox
+    width: 180px
+
+  .form-quiz
+    align-items: flex-start
+    flex-direction: column
+    padding: 20px 12px 13px
+    background: #F7F7F7
+
+  .slide-box
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  .check-description
+    margin: 0 auto 14px
+
+  .form-quiz__left
+    padding: 0
+    width: 100%
+    order: 1
+    box-shadow: none
+
+  .dialog-manager__wrapper
+    width: 100%
+    box-shadow: none
+    .title-quiz
+      display: block
+    .slick-list
+      overflow: visible
+
+  .dialog-manager
+    padding: 6px 10px 6px 7px
+    background: #fff
+    border-radius: 4px
+    box-shadow: none
+    position: relative
+    height: auto
+
+  .title-quiz
+    display: none
+    text-align: center
+    font-size: 20px
+    margin: 0 auto 18px
+
+  .avatar
+    width: 48px
+    min-width: 48px
+    height: 48px
+
+
+  .status-online
+    width: 10px
+    height: 10px
+    right: 3px
+    bottom: 0
+
+  .manager
+    position: relative
+    align-items: flex-start
+
+  .banner-min
+    display: none
+
+  .quiz-stages__result
+    .banner-min
+      display: flex
+
+  .form-quiz__content
+    background: transparent
+
+
+  .manager-info__wrapper
+    padding: 0 29px 0 11px
+    position: relative
+
+  .manager-info
+    width: 100%
+    padding: 0
+    display: flex
+    align-items: center
+    font-size: 10px
+    .name
+      max-width: none
+      margin: 0 12px 0 0
+      color: #515254
+      span
+        display: none
+
+
+  .quote
+    display: none
+
+  .btn-toggle
+    display: flex
+
+  .quote-min
+    display: block
+
+  .quote-min__hidden
+    display: none
+
+  .quiz-stages
+    padding: 0
+
+  .quiz-stages__business-area
+    .list-checkbox
+      li
+        width: auto
+    .checkbox
+      width: 160px
+      height: 200px
+      margin: 0 0 19px
+      .label
+        height: 100%
+        font-size: 10px
+        padding: 0 0 0 11px
+
+  .checkbox
+    margin: 0 0 15px
+    .image
+      height: 150px
+      min-height: 150px
+
+  .form-quiz__footer
+    background: transparent
+    border: none
+    padding: 25px 0 0
+
+  .form-quiz .slick-next
+    width: 105px
+    font-size: 12px
+    .icon
+      width: 15px
+
+  .result-form
+    padding: 0
+    width: 100%
+    max-width: 330px
+    margin: 23px 0 0
+    box-shadow: none
+    background: transparent
+
+  .slide-box
+    .quiz-stages__result
+      display: block
+
+  .form-quiz-result
+    .dialog-manager__wrapper
+      width: 100%
+    .form-quiz__left
+      order: -1
+      width: 100%
+      max-width: none
+      margin: 0
+    .timeline-wrapper
+      max-width: 337px
+    .form-quiz__content
+      padding: 0
+
+  .form-quiz__left
+    margin: -50px 0 0
+
+  .btn-presents
+    display: flex
+
 @media only screen and (max-width : 575px)
   .stages-assessment
     padding: 40px 0
@@ -810,6 +1024,29 @@
     margin: 14px auto 0
     font-size: 12px
 
+  .list-checkbox
+    justify-content: space-around
+
+  .list-checkbox li
+    width: 100%
+
+  .quiz-stages__result .description
+    margin: 0 0 23px
+    font-size: 12px
+
+  .result-title
+    font-size: 18px
+    margin: 23px 0
+
+  .form-quiz-result .timeline-wrapper
+    .percent
+      p
+        font-size: 9px
+
+  .result-form label input
+    font-size: 12px
+
+
 @media only screen and (max-width : 480px)
   .logo
     max-width: 78px
@@ -908,10 +1145,12 @@
     h2
       padding: 0 0 0 20px
 
+  .title-quiz
+    font-size: 16px
 
+  .form-quiz__left
+    margin: 0
 
-
-/* Custom, iPhone Retina */
 @media only screen and (max-width : 380px)
   .line-number .line
     width: 120px
@@ -932,5 +1171,13 @@
     width: 188px
     left: -135px
 
-@media only screen and (max-width : 320px)
-	/**/
+  .manager-info__wrapper
+    padding: 0 20px 0 14px
+
+  .manager-info .name
+    margin: 0 5px 0 0
+
+  .quiz-stages__business-area .checkbox
+    width: 140px
+    height: 180px
+
