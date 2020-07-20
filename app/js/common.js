@@ -137,29 +137,40 @@ $(".form-quiz__content").on("afterChange", function (event) {
 
 // mail
 $("form").submit(function () {
+
     $.ajax({
         type: "POST",
         url: "mail.php",
-        data: $(this).serialize()
-    }).done(function () {
-        $(this).find("input").val("");
-        // alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
-        $('.modal__div').css('display', 'none').animate({
-            opacity: 0,
-            top: '45%'
-        });
+        data: $(this).serialize(),
+        async: true,
+        success: function (data) {
+            $(this).find("input").val("");
+            // alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+            $('.modal__div').css('display', 'none').animate({
+                opacity: 0,
+                top: '45%'
+            });
 
-        // $('.overlay').fadeIn();
+            // $('.overlay').fadeIn();
 
-        $('#thanks__modal').css('display', 'flex')
-            .animate({
-                opacity: 1,
-                top: '50%'
-            }, 200);
-        $("form").trigger("reset");
+            $('#thanks__modal').css('display', 'flex')
+                .animate({
+                    opacity: 1,
+                    top: '50%'
+                }, 200);
+            $("form").trigger("reset");
+        }
     });
     return false;
 });
+
+setTimeout(function () {
+    $("#thanks__modal").css('display', 'none').animate({
+        opacity: 0,
+        top: '45%'
+    });
+    $('.overlay').fadeOut(400);
+}, 1000);
 
 // animate scroll
 $(document).ready(function () {
@@ -196,11 +207,11 @@ $('.question-box > h3').click(function () {
 });
 
 $('.btn-toggle').click(function () {
-   $(this).toggleClass('click').parents('.manager-info__wrapper').find('.quote-min__visibility').fadeToggle().siblings('.quote-min__hidden').fadeToggle();
+    $(this).toggleClass('click').parents('.manager-info__wrapper').find('.quote-min__visibility').fadeToggle().siblings('.quote-min__hidden').fadeToggle();
 });
 
 $('.btn-close-bonus').click(function () {
-   $('.bonus-mobile').fadeOut();
+    $('.bonus-mobile').fadeOut();
 });
 
 $('.btn-presents').click(function () {
