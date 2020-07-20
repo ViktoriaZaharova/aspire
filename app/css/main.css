@@ -613,7 +613,9 @@ main {
   height: 40px; }
 
 .stages-assessment {
-  padding: 150px 0; }
+  padding: 150px 0;
+  border-top: 2px solid rgba(145, 142, 142, 0.1);
+  border-bottom: 2px solid rgba(145, 142, 142, 0.1); }
 
 .stages-assessment__content {
   width: 100%;
@@ -793,7 +795,9 @@ main {
   bottom: 104px; }
 
 .project {
-  padding: 150px 0 170px; }
+  padding: 150px 0 170px;
+  border-top: 2px solid rgba(145, 142, 142, 0.1);
+  border-bottom: 2px solid rgba(145, 142, 142, 0.1); }
 
 .project-content {
   width: 100%;
@@ -960,7 +964,9 @@ main {
         margin: 0; }
 
 .question {
-  padding: 150px 0 79px; }
+  padding: 150px 0 79px;
+  border-top: 2px solid rgba(145, 142, 142, 0.1);
+  border-bottom: 2px solid rgba(145, 142, 142, 0.1); }
 
 .bg-icon {
   position: absolute;
@@ -2017,7 +2023,7 @@ form button {
 
 .bonus-mobile__title {
   width: 100%;
-  border-radius: 4px 0px 0px 0px;
+  border-radius: 4px 0 0 0;
   background: #3B73C6;
   height: 30px;
   color: #fff;
@@ -2054,6 +2060,9 @@ form button {
 .bonus-mobile__body {
   width: 100%;
   padding: 21px 12px 14px 10px; }
+
+.modal-open {
+  overflow: hidden; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */

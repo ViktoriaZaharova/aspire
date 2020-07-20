@@ -102,10 +102,14 @@ $(document).ready(function () {
 
             });
 
+        $('body, html').addClass('modal-open');
+
 
     });
 
     close.click(function () {
+        $('.dialog-manager__wrapper').slick('unslick');
+        $('.form-quiz__content').slick('unslick');
         modal
             .animate({
                     opacity: 0,
@@ -116,6 +120,8 @@ $(document).ready(function () {
                     overlay.fadeOut(400);
                 }
             );
+
+        $('body, html').removeClass('modal-open');
     });
 });
 //end
@@ -137,7 +143,19 @@ $("form").submit(function () {
         data: $(this).serialize()
     }).done(function () {
         $(this).find("input").val("");
-        alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+        // alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+        $('.modal__div').css('display', 'none').animate({
+            opacity: 0,
+            top: '45%'
+        });
+
+        // $('.overlay').fadeIn();
+
+        $('#thanks__modal').css('display', 'flex')
+            .animate({
+                opacity: 1,
+                top: '50%'
+            }, 200);
         $("form").trigger("reset");
     });
     return false;
