@@ -102,7 +102,7 @@ $(document).ready(function () {
 
             });
 
-        $('body, html').addClass('modal-open');
+        // $('body, html').addClass('modal-open');
 
 
     });
@@ -121,7 +121,7 @@ $(document).ready(function () {
                 }
             );
 
-        $('body, html').removeClass('modal-open');
+        // $('body, html').removeClass('modal-open');
     });
 });
 //end
@@ -136,7 +136,7 @@ $(".form-quiz__content").on("afterChange", function (event) {
 
 
 // mail
-$("form").submit(function () {
+$(".form").submit(function () {
 
     $.ajax({
         type: "POST",
@@ -145,32 +145,70 @@ $("form").submit(function () {
         async: true,
         success: function (data) {
             $(this).find("input").val("");
-            // alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+
             $('.modal__div').css('display', 'none').animate({
                 opacity: 0,
                 top: '45%'
             });
-
-            // $('.overlay').fadeIn();
 
             $('#thanks__modal').css('display', 'flex')
                 .animate({
                     opacity: 1,
                     top: '50%'
                 }, 200);
-            $("form").trigger("reset");
+
+            setTimeout(function () {
+                $("#thanks__modal").css('display', 'none').animate({
+                    opacity: 0,
+                    top: '45%'
+                });
+                $('.overlay').fadeOut(400);
+            }, 1000);
+            $(".form").trigger("reset");
         }
     });
     return false;
 });
 
-setTimeout(function () {
-    $("#thanks__modal").css('display', 'none').animate({
-        opacity: 0,
-        top: '45%'
+
+$(".form-quiz").submit(function () {
+
+    $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: $(this).serialize(),
+        async: true,
+        success: function (data) {
+            $(this).find("input").val("");
+
+            $('.modal__div').css('display', 'none').animate({
+                opacity: 0,
+                top: '45%'
+            });
+
+            $('#thanks__modal').css('display', 'flex')
+                .animate({
+                    opacity: 1,
+                    top: '50%'
+                }, 200);
+
+            setTimeout(() => {
+                window.location = '../document.zip';
+            }, 1000);
+
+            setTimeout(function () {
+                $("#thanks__modal").css('display', 'none').animate({
+                    opacity: 0,
+                    top: '45%'
+                });
+                $('.overlay').fadeOut(400);
+            }, 1000);
+            $(".form-quiz").trigger("reset");
+        }
     });
-    $('.overlay').fadeOut(400);
-}, 1000);
+    return false;
+});
+
 
 // animate scroll
 $(document).ready(function () {

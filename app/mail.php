@@ -11,7 +11,9 @@
     $radio_sum = trim($_POST["radio_sum"]);
     $radio_start = trim($_POST["radio_start"]);
     $radio_time_business = trim($_POST["radio_time_business"]);
-    $check_tools = trim($_POST["check_tools"]);
+
+    $check_tools = implode(',', $_POST["check_tools"]);
+
     $radio_active_sum = trim($_POST["radio_active_sum"]);
     $radio_valuation_amount = trim($_POST["radio_valuation_amount"]);
 
