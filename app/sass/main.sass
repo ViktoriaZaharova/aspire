@@ -1351,6 +1351,29 @@ form
         display: none
     .checkbox-inp:checked + .checkbox-custom
       border-width: 2px
+  .checkbox-input
+    background: transparent
+    input
+      border: 1px solid #EAEAEA
+      width: 100%
+      height: 50px
+      &:hover
+        border: 1px solid #3B73C6
+
+.checkbox-input
+  padding: 0
+  input
+    border-radius: 4px
+    height: 100%
+    width: 100%
+    font-size: 14px
+    color: #BDC9E3
+    font-family: $default-font
+    border: 1px solid #EAEAEA
+    &::placeholder
+      color: #BDC9E3
+    &:hover
+      border: 1px solid #3B73C6
 
 .scroll-block
   padding: 0 46px 20px 0

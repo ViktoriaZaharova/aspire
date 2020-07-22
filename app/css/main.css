@@ -1601,6 +1601,36 @@ form button {
   .quiz-stages__business-area .checkbox .checkbox-inp:checked + .checkbox-custom {
     border-width: 2px; }
 
+.quiz-stages__business-area .checkbox-input {
+  background: transparent; }
+  .quiz-stages__business-area .checkbox-input input {
+    border: 1px solid #EAEAEA;
+    width: 100%;
+    height: 50px; }
+    .quiz-stages__business-area .checkbox-input input:hover {
+      border: 1px solid #3B73C6; }
+
+.checkbox-input {
+  padding: 0; }
+  .checkbox-input input {
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    color: #BDC9E3;
+    font-family: "Exo 2", sans-serif;
+    border: 1px solid #EAEAEA; }
+    .checkbox-input input::-webkit-input-placeholder {
+      color: #BDC9E3; }
+    .checkbox-input input::-moz-placeholder {
+      color: #BDC9E3; }
+    .checkbox-input input::-ms-input-placeholder {
+      color: #BDC9E3; }
+    .checkbox-input input::placeholder {
+      color: #BDC9E3; }
+    .checkbox-input input:hover {
+      border: 1px solid #3B73C6; }
+
 .scroll-block {
   padding: 0 46px 20px 0;
   overflow-y: scroll;
